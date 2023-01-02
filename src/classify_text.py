@@ -84,8 +84,7 @@ def get_classified_result(text_detail):
 
     model = BERTClassifier(bertmodel, dr_rate=0.5).to(device)
     model.load_state_dict(torch.load('kobert_model_state_dict.pt', map_location='cpu'))
-
-    print( [0]*len(pred_list))
+    
     
     #토큰화
     tokenizer = get_tokenizer()
